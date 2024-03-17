@@ -1,0 +1,18 @@
+/*selector de tipo (tag)*/   
+h1 {
+    color: red !important;
+}   
+
+/*selector de clase*/
+.colorVerde {
+    color: green;
+}
+
+/*selector de id*/
+#colorNegro {
+    color: blueviolet;
+}
+/*especifidad
+    inline > id > clase > tipo
+    !important 
+*/

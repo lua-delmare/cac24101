@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <header>
+        <h1>Formularios</h1>
+    </header>
+
+    <main>
+        <section>
+        <!--los formularios son para enviar informacion-->
+        <!--si no le pongo nada al formulario por defecto viaja por get-->
+        <!--quiere decir que va a viajar a la url de la pagina los datoss del form-->
+        <form>
+        <fieldset>
+            <legend>Datos</legend>
+            <!--varios tipos de imput-->
+            <!--paraq conectar el label con el input debemos ponerle un id al imput y un for al label del mismo nombre -->
+            <!--¡para que sirve esto: para que cuando se presiona en nombre automaticamente se marque oarqa completar dicho campo-->
+            <div>
+            <label for="nombre">Nombre</label>
+            <input maxlength="5" 
+            id="nombre"
+            placeholder="Luana"
+            name="nombre"> <!--placeholder para q aparezca transparencia de ejemplo-->
+            </div>
+            
+            <br>
+            <br>
+
+            <!--div para separar en bloqes-->
+            <div>
+            <label for="number">Edad</label>
+            <input type="number" min="18" max="100" id="number"
+            name="number">
+            </div>
+
+            <!--fehca de nacimiento-->
+            <div>
+                <br>
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="nacimiento"
+                name="nacimiento">
+                </div>
+            
+            <!--subir imagen-->
+                <div>
+                    <br>
+                    <label for="foto">Foto</label>
+                    <input type="file" id="foto"
+                    required
+                    name="foto"> <!--campo obligatorio-->
+                    </div>
+
+            <!--nacionalidad-->
+            <div>
+                <br>
+                <label for="nacionalidad">Nacionalidad</label>
+                <select name="nacionalidad" id="nacionalidad">
+                    <!--el selected es para que se seleccione el que desees por default-->
+                    <!--osea el selcet precarga lo elegido-->
+
+                    <option value="" selected>Seleccione</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Brasil">Brasil</option>
+                </select>   
+                </div>
+
+                <br>
+                
+                <!--el input rario  es para elegir una entre varias opciones-->
+                <!--terminos y condiciones con input checkbocks-->
+                <div>
+                    <label for="tyc">T&C</label>
+                    <span>SI</span>
+                    <input type="checkbox"
+                     name="tyc" 
+                     id="tyd" 
+                     value="si">
+                </div>
+
+                <br>
+
+                <div>
+                    <label>Turno:</label>
+                    <div>
+                        <label>Mañana</label>
+                        <input type="radio"
+                        name="turno"
+                        value="mañana">
+                        <label>Tarde</label>
+                        <input type="radio"
+                        name="turno"
+                        value="tarde">
+                        <label>Noche</label>
+                        <input type="radio"
+                        name="turno"
+                        value="noche">
+                    </div>
+                </div>
+
+                <div>
+                    
+                    <br>
+                    <button>
+                        Enviar
+                    </button>
+
+                    <button type="reset">
+                        Limpiar
+                    </button>
+                </div>
+        </form>
+        </fieldset>
+    </section>
+
+
+    <section>
+        <h3>Login</h3>
+        <form method="post">
+            <div>
+                 <label>Usuario</label>
+                 <input type="text" name="usuario" required>
+            </div>
+            <div>
+                <label>Contraseña</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button>
+                Login
+            </button>
+        </form>
+    </section>
+    </main>
+    
+    <br>
+    <a href="../index.html">Volver</a>
+</body>
+</html>
